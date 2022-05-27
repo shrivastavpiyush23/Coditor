@@ -14,34 +14,42 @@
     overflow-x: hidden;
   }
   .topnav {
-    background-color: black;
-    overflow: hidden;
-    width: auto;
-    animation-name: nav;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    transition-property: transform;
-  }
-  @keyframes nav{
-    0%{opacity: 0}
-    100%{opacity: 1}
-  }
-  .topnav h1 {
-      color: white;
+    background: #1e1f26;
+    height: 65px;
   }
   
-  .topnav a {
-    float: right;
-    color: #f2f2f2;
+  .topnav h1 {
+    padding: 0;
+    margin-left: 10px;
     text-align: center;
+    color: #fff;
+    font-weight: 700;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    line-height: 35px;
+    font-family: 'IBM Plex Sans', sens-serif;
+  }
+  
+  .topnav > h1 > a {
+    color: black;
+    background: #7af5c8;
+    text-align: center;
+    align-items: center;
+    line-height: 80%;
     padding: 14px 16px;
+    margin-left: 1600px;
     text-decoration: none;
-    font-size: 28px;
+    font-size: 20px;
+    border: 1px solid #7af5c8;
     border-radius: 20px;
+    height: 20px;
+    float: right;
   }
   
   .topnav a:hover {
-    background-color: rgb(214, 51, 51);
+    background-color: rgb(8, 4, 41);
     color: black;
   }
   
@@ -68,6 +76,7 @@
     animation: heading;
     animation-duration: 3s;
     animation-fill-mode: forwards;
+    font-family: 'IBM Plex Sans', sens-serif;
   }
   
   @keyframes heading{
@@ -80,6 +89,7 @@
     animation-name: content;
     animation-duration: 3s;
     animation-fill-mode: forwards;
+    font-family: 'IBM Plex Sans', sens-serif;
   }
   
   @keyframes content{
@@ -96,6 +106,7 @@
       border: white 1px solid;
       border-radius: 35px;
       margin-top: 40px;
+      font-family: 'IBM Plex Sans', sens-serif;
       opacity: 0;
       animation-name: btn;
       animation-duration: 3s;
@@ -107,8 +118,8 @@
   
   .btn:hover{
     transform: rotateY(360deg);
-    color: red;
-    border: red 1px solid;
+    color: rgb(8, 4, 41);
+    border: rgb(8, 4, 41) 1px solid;
   }
   
   @keyframes btn {
@@ -121,6 +132,7 @@
     padding: 3px;
     opacity: 1;
     background-color: rgba(68,177,147,0.6);
+    font-family: 'IBM Plex Sans', sens-serif;
     color: white;
     position: absolute;
     width: 100%;

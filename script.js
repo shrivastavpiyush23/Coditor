@@ -1,12 +1,13 @@
-function run() {
-    let htmlCode = document.querySelector(".editor #html-code").value;
-    let cssCode = "<style>"+document.querySelector(".editor #css-code").value+"</style>";
-    let jsCode = document.querySelector(".editor #js-code").value;
-    let output = document.querySelector(".editor #output");
-    // console.log(htmlCode, cssCode, jsCode, output);
-    output.contentDocument.body.innerHTML = htmlCode+cssCode;
-    output.contentWindow.eval(jsCode);
+function compile(){
+    var html = document.getElementById("html");
+    var css = document.getElementById("css");
+    var js = document.getElementById("js");
+    var code = document.getElementById("code").contentWindow.document;
+
+    document.body.onkeyup = function(){
+        code.open();
+        code.writeln(html.value+"<style>"+css.value+"</style>" + "<script>"+js.value+"</script>")
+        code.close();
+    }
 }
-document.querySelector(".editor #html-code").addEventListener("keyup",run);
-document.querySelector(".editor #css-code").addEventListener("keyup",run);
-document.querySelector(".editor #js-code").addEventListener("keyup",run);
+compile();

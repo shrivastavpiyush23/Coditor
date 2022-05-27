@@ -8,17 +8,24 @@
     <title>Code editor</title>
 </head>
 <body>
-    <div class="topnav">
-        <h1>Coditor</h1>
-        <a class="active" href="index.html">Home</a>
-      </div>
-    <div class="editor">
-        <textarea id="html-code" placeholder="Enter your HTML code here!"></textarea>
-        <textarea id="css-code" placeholder="Enter your CSS code here!"></textarea>
-        <textarea id="js-code" placeholder="Enter your JS code here!"></textarea>
-        <iframe id="output"></iframe>
+    <div id="coding_playground_outer">
+        <header id="playground_header">
+          <h1> CODITOR <a class="active" href="index.html">Home</a></h1> 
+        </header>
     </div>
-
-    <script type="text/javascript" src="/script.js"></script>
+    <div class="page-wrap twilight">
+        <div class="boxes">
+          <div id="coding_area">
+            <textarea id="html" placeholder="HTML" class="prism-live language-html"></textarea> 
+            <textarea id="css" placeholder="CSS" class="prism-live language-css"></textarea> 
+            <textarea id="js" placeholder="javascript" class="prism-live language-js"></textarea> 
+          </div>
+          <div id="code_output">
+            <iframe id="code"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
