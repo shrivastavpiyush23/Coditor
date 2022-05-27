@@ -119,8 +119,6 @@
   footer {
     text-align: center;
     padding: 3px;
-    /* background-color: rgb(68, 187, 147);
-    opacity: 0.6; */
     opacity: 1;
     background-color: rgba(68,177,147,0.6);
     color: white;
