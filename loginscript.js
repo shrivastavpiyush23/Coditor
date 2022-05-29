@@ -1,11 +1,42 @@
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
 
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-});
+const firebaseConfig = {
+	apiKey: "AIzaSyBueQSrP0a65SGZ5-ENYsRHxbgK7Z6agOM",
+	authDomain: "coditor-76636.firebaseapp.com",
+	projectId: "coditor-76636",
+	storageBucket: "coditor-76636.appspot.com",
+	messagingSenderId: "514743825169",
+	appId: "1:514743825169:web:f2114c45b52cee782092b0",
+	measurementId: "G-612TYKCB8W"
+  };
+  firebase.initializeApp(firebaseConfig);
+  const auth =  firebase.auth();
 
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
-});
+  function signUp(){
+    var email = document.getElementById("email");
+    var password = document.getElementById("password");
+    const promise = auth.createUserWithEmailAndPassword(email.value,password.value);
+	promise.catch(e=>alert(e.message));
+    alert("SignUp Successfully");
+  }
+  function signIn(){
+    var email = document.getElementById("email");
+    var password  = document.getElementById("password");
+    const promise = auth.signInWithEmailAndPassword(email.value,password.value);
+    promise.catch(e=>alert(e.message));
+    
+  }
+  function signOut(){
+    auth.signOut();
+    alert("SignOut Successfully from System");
+  }
+
+  firebase.auth().onAuthStateChanged((user)=>{
+    if(user){
+      var email = user.email;
+      alert("Active user "+email);
+
+    }else{
+      alert("No Active user Found")
+    }
+  })
+
