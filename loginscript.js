@@ -23,8 +23,10 @@ const firebaseConfig = {
     var password  = document.getElementById("password");
     const promise = auth.signInWithEmailAndPassword(email.value,password.value);
     promise.catch(e=>alert(e.message));
-    
   }
+//   function jump(){
+// 	window.location.href("https://shrivastavpiyush23.github.io/Edi-Code/editor.html")
+//   }
   function signOut(){
     auth.signOut();
     alert("SignOut Successfully from System");
