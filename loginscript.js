@@ -20,9 +20,7 @@ const firebaseConfig = {
   }
 
   function jump(){
-    window.location.replace("https://shrivastavpiyush23.github.io/Edi-Code/editor.html");
-    
-    console.log("jump called");
+    window.location.replace("https://shrivastavpiyush23.github.io/Coditor/editor.html");
     }
 
   function signIn(){
@@ -30,14 +28,10 @@ const firebaseConfig = {
     var password  = document.getElementById("password");
     const promise = auth.signInWithEmailAndPassword(email.value,password.value);
     promise.catch(e=>alert(e.message));
-    console.log("login succesful")
     jump();
 
 
   }
-//   function jump(){
-// 	window.location.href("https://shrivastavpiyush23.github.io/Edi-Code/editor.html")
-//   }
   function signOut(){
     auth.signOut();
     alert("SignOut Successfully from System");
