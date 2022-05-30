@@ -20,7 +20,7 @@ const firebaseConfig = {
   }
 
   function jump(){
-    window.location.replace("https://shrivastavpiyush23.github.io/Edi-Code/editor.html");
+    window.location.replace("https://shrivastavpiyush23.github.io/Coditor/editor.html");
     
     console.log("jump called");
     }
